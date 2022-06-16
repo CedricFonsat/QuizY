@@ -6,7 +6,12 @@ let tabChoices = [["choix1", "choix2", "choix3", "choix4"], ["choix4", "choix5",
 let goodAnswer = [tabChoices[0][0], tabChoices[1][1], tabChoices[2][2], tabChoices[3][3]]
 let round = 0;
 let scoreNumber = 0;
+let time = 10
+let reboure =  document.querySelector("#rebour")
 
+displayQuestion()
+displayChoice()
+updateTime()
 
 function displayQuestion() {
     question.innerText = tabQuestions[round]
@@ -40,8 +45,23 @@ function scoreQuiz() {
     scoreNumber++
     score.innerText = "Your score is : " + scoreNumber+"/4"
 }
-
-
-displayQuestion()
-displayChoice()
-
+function displayTime(rebour) {
+  reboure.innerText = rebour
+}
+function updateTime() {
+    if (time > 0) {
+        setTimeout(function () {
+            time--
+            displayTime(time)
+            updateTime()
+        }, 1000);
+        if (round >= 4) {
+            rebour.innerText = ""
+        }
+    }
+    else{
+        time = 10
+        updateTime()
+        nextQuestion()
+    }
+}
