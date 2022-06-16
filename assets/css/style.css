@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(7, 0, 56);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#quiz{
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.choice{
+    width: 350px;
+    border: 2px solid rgb(127, 127, 127);
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin: 10px;
+    color: white;
+    background: none;
+
+}
+#question{
+    color: white;
+}
+#score{
+    color: white;
+}
+.responseA{
+    margin-bottom: 5%;
+}
+.responseB{
+    margin-bottom: 10%;
+}

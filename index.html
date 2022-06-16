@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>QuizY</title>
 </head>
 <body>
     <section id="quiz">
-        <p class="point"></p>
-        <p class="text">test</p>
-        <button class="choice">test</button>
-        <button class="choice">test</button>
-        <button class="choice">test</button>
-        <button class="choice">test</button>
+        <p id="score"></p>
+        <p id="question"></p>
+        <div class="responseA">
+            <button onclick="checked(this)" class="choice"></button>
+            <button onclick="checked(this)" class="choice"></button>
+        </div>
+        <div class="responseB">
+            <button onclick="checked(this)" class="choice"></button>
+            <button onclick="checked(this)" class="choice"></button>
+        </div>
     </section>
     <script src="assets/js/main.js"></script>
 </body>
